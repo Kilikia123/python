@@ -24,5 +24,5 @@ class Weather:
 		elif other_deg + self.delta <= self.degrees:
 			print("Cильно похолодало")
 		print("Сейчас: " + str(other_deg) + " ℃")
-		time.sleep(600)
+		time.sleep(5184000)
 		self.compare_degrees()
