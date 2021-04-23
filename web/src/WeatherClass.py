@@ -25,4 +25,4 @@ class Weather:
 			print("Cильно похолодало")
 		print("Сейчас: " + str(other_deg) + " ℃")
 		time.sleep(600)
-		self.check_currency()
+		self.compare_degrees()
