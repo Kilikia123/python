@@ -4,7 +4,7 @@ import unittest
 
 class MyTestCase(unittest.TestCase):
     def tuneIn(self):
-        self.myWeather = weather.Weather()
+        self.myWeather = src.WeatherClass.Weather()
 
     def testGetDegrees(self, ideal_value):
         my_degrees = int(self.myWeather.get_degrees())
