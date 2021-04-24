@@ -1,6 +1,4 @@
-import sys
-sys.path.insert(1, '~/python/web/src')
-import WeatherClass
+import src.WeatherClass
 import unittest
 
 
