@@ -60,7 +60,7 @@ class Weather:
         other_day_of_week = str(self.get_day())
         print()
         if other_deg >= self.degrees + self.delta:
-            print("Наблюдается сильное потеплело")
+            print("Наблюдается сильное потепление")
         elif other_deg + self.delta <= self.degrees:
             print("Наблюдается сильное похолодание")
         print(other_day_of_week)
