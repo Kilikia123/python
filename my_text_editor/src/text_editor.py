@@ -1,9 +1,10 @@
 import tkinter
 from tkinter import *
+from CodeWarrior import text
 from tkinter.filedialog import asksaveasfile, askopenfile
 from tkinter.messagebox import showerror
 
-FILE_NAME = tkinter.NONE
+FILE_NAME = "Default"
 
 class Node(Frame):
     def __init__(self, master=None):
