@@ -1,17 +1,20 @@
+#!/usr/bin/env python
+# -- coding: utf-8 --
+
+import time
+
 import requests
 from bs4 import BeautifulSoup
-import time
-import smtplib
 
 
 class Weather:
-    WEATHER_C = 'https://www.google.com/search?q=%D0%BF%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7+%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D1%8B&oq=ghjuyj&aqs=chrome.1.69i57j0i1i10i457j0i402l2j0i1i10l6.2098j0j7&sourceid=chrome&ie=UTF-8'
+    WEATHER_C = 'https://www.google.com/search?q=прогноз+погоды&oq=ghjuyj..'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'}
-    degrees = 0 # температура
-    prob_prec = 0 # вероятность осадков
-    humidity = 0 # влажность
-    wind_speed = 0 # ветер
+    degrees = 0  # температура
+    prob_prec = 0  # вероятность осадков
+    humidity = 0  # влажность
+    wind_speed = 0  # ветер
     day_of_week = ""
     delta = 10
 
@@ -58,7 +61,6 @@ class Weather:
         other_humidity = int(self.get_humidity()[:-1])
         other_wind_speed = int(self.get_wind_speed()[0])
         other_day_of_week = str(self.get_day())
-        print()
         if other_deg >= self.degrees + self.delta:
             print("Наблюдается сильное потепление")
         elif other_deg + self.delta <= self.degrees:

@@ -1,4 +1,4 @@
-import WeatherClass
+import weather_class
 
-weather = WeatherClass.Weather()
+weather = weather_class.Weather()
 weather.compare_degrees()
